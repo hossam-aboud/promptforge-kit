@@ -305,7 +305,7 @@ promptforge/
 Pull requests are welcome.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/promptforge.git
+git clone https://github.com/hossam-aboud/promptforge-kit.git
 cd promptforge
 pip install -e .
 ```
@@ -325,5 +325,5 @@ MIT — use it, fork it, build on it.
 ---
 
 <div align="center">
-Built with Claude · Made for developers who use AI seriously
+Built with Hossam Aboud · Made for developers who use AI seriously
 </div>

@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: agent-kit
+Version: 1.0.0
+Summary: Generate optimized prompts for AI coding agents (Claude Code, Cursor, Aider, Copilot, and more)
+License: MIT
+Keywords: ai,llm,claude,cursor,aider,prompts,cli
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# 🤖 agent-kit
+
+> Generate optimized prompts for **every** AI coding agent — from one idea.
+
+```
+agent-kit generate "build a SaaS app with Stripe billing and auth"
+```
+
+Instantly produces tailored prompts, config files, and power tips for:
+
+| Agent | Config File | Best For |
+|---|---|---|
+| **Claude Code** | `CLAUDE.md` | Architecture specs, phased tasks |
+| **Cursor** | `.cursorrules` | IDE rules, coding conventions |
+| **Aider** | session prompt | Incremental commits, git workflow |
+| **GitHub Copilot** | system prompt | Typed interfaces, docstrings |
+| **Continue** | `config.json` | Extensible open-source setups |
+| **Sourcegraph Cody** | context hints | Codebase-wide awareness |
+
+---
+
+## Installation
+
+```bash
+pip install anthropic
+pip install -e .
+```
+
+## Setup
+
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...
+```
+
+## Usage
+
+### Generate for all agents:
+```bash
+agent-kit generate "build a todo app with auth and PostgreSQL"
+```
+
+### Target specific agent:
+```bash
+agent-kit generate "REST API for e-commerce" --agent claude-code
+```
+
+### Save to files:
+```bash
+agent-kit generate "food delivery app" --output ./my-project
+```
+
+### Arabic output:
+```bash
+agent-kit generate "تطبيق إدارة المهام" --lang arabic
+```
+
+### List agents:
+```bash
+agent-kit list-agents
+```
+
+## Options
+
+| Flag | Values | Default | Description |
+|---|---|---|---|
+| `--agent` | `all`, `claude-code`, `cursor`, `aider`, `copilot`, `continue`, `cody` | `all` | Target agent |
+| `--lang` | `english`, `arabic` | `english` | Output language |
+| `--output` / `-o` | path | stdout | Save to directory |
+| `--no-color` | — | — | Disable colors |
+
+## License
+MIT

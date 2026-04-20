@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "agent-kit"
+version = "1.0.0"
+description = "Generate optimized prompts for AI coding agents (Claude Code, Cursor, Aider, Copilot, and more)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["ai", "llm", "claude", "cursor", "aider", "prompts", "cli"]
+dependencies = [
+    "anthropic>=0.25.0",
+]
+
+[project.scripts]
+agent-kit = "agent_kit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_kit*"]

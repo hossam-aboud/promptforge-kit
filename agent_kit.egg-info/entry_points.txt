@@ -1,0 +1,2 @@
+[console_scripts]
+agent-kit = agent_kit.cli:main
